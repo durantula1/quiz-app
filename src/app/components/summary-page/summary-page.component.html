@@ -1,0 +1,33 @@
+<div class="container">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>Quiz Summary</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p>Question: {{questionService.selectedQuestionSignal()?.question}}</p>
+            <p>Selected Answer: {{ questionService.selectedQuestionSignal()?.userAnswer }}</p>
+            <p *ngIf="questionService.selectedQuestionSignal()" [ngClass]="isAnswerCorrect() ? 'correct-style' : 'wrong-style'">
+                Correct: {{ isAnswerCorrect() ? 'Yes' : 'No' }}
+            </p>
+            <p *ngIf="!questionService.selectedQuestionSignal()">
+                <mat-chip-option color="accent">There is no selected answers!</mat-chip-option>
+            </p>
+        </mat-card-content>
+        
+    </mat-card>
+      
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>Quiz Statistic</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p>Total Questions: {{questionService.questionsListSignal().length}}</p>
+            <p>Correct Answers: {{questionService.correctAnswersCounter()}}</p>
+            <p>Percentage Correct: {{calculatePercentageCorrect()}}%</p>
+        </mat-card-content>
+    </mat-card>
+
+    <button mat-raised-button class="redirect-btn" routerLink="/">Go to Home page</button>
+</div>

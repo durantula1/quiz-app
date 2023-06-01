@@ -1,0 +1,14 @@
+.card {
+    margin-bottom: 1rem;
+    width: 50%;
+
+    mat-card-actions {
+        justify-content: center;
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    background: #d1cbcb;
+}

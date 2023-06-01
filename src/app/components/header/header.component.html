@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1 routerLink="/">Quiz App</h1>
+      <span class="menu-spacer"></span>
+      <div class="button-links">
+        <a mat-button (click)="resetQuiz()"> Restart Quiz </a>
+        <a mat-button [routerLink]="'/summary'"> Summary page </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>

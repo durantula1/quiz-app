@@ -1,0 +1,17 @@
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+.button-links {
+    a {
+        color: white;
+    }
+}
+
+.button-links a:last-child {
+    margin-left: 1rem;
+}
+
+h1 {
+    cursor: pointer;
+}
