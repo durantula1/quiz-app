@@ -1,0 +1,5 @@
+Used methods:
+    1. New Angular Signals for state management
+    2. Lazy loading for optimize performance
+    3. Angular Materials for nice user experience
+    4. Code splitting for better maintenance
